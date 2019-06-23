@@ -1,7 +1,7 @@
 #pragma once
 #include <utility>
-#include "Meta.hpp"
-#include "Concept.hpp"
+#include <Meta/Meta.hpp>
+#include <Concept/Concept.hpp>
 
 namespace COMPANY_NAME
 {

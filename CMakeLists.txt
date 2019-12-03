@@ -1,34 +1,20 @@
-CMake_Minimum_Required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.13)
 
-Project(Reflection)
+project(reflection)
 
-If(DEFINED TESTING)
-	If(${TESTING} STREQUAL true)
-		Add_Executable(Reflection "Test/Main.cpp")
-		Target_Compile_Definitions(Reflection PRIVATE TESTING)
-		Add_Subdirectory(Test)
-	Else()
-		Add_Library(Reflection INTERFACE)
-	EndIf()
-	Unset(TESTING CACHE)
-ELSE()
-	Add_Library(Reflection INTERFACE)
-EndIf()
+add_library(reflection INTERFACE)
 
-Add_Subdirectory(Source)
-Add_Subdirectory(Include)
-Add_Subdirectory(Imp)
+add_subdirectory(include)
+add_subdirectory(src)
 
-Target_Compile_Features(Reflection 
-    INTERFACE cxx_std_17)
+target_compile_features(reflection INTERFACE cxx_std_17)
 
-Set(CMAKE_CXX_STANDARD "libc++")
 #Set(CMAKE_CXX_FLAGS "-Wall" "-Wextra")
 
-Install(TARGETS Reflection EXPORT Reflection DESTINATION lib/Reflection)
-Install(EXPORT Reflection DESTINATION lib/Reflection)
-Install(FILES ReflectionConfig.cmake DESTINATION lib/Reflection)
+install(TARGETS reflection EXPORT reflection DESTINATION lib/reflection)
+install(EXPORT reflection DESTINATION lib/reflection)
+install(FILES reflection-config.cmake DESTINATION lib/reflection)
 
-Find_Package(Concept REQUIRED)
-Find_Package(Meta REQUIRED)
-Target_Link_Libraries(Reflection INTERFACE Concept Meta)
+find_Package(concept REQUIRED)
+find_Package(meta REQUIRED)
+target_link_libraries(reflection INTERFACE concept meta)

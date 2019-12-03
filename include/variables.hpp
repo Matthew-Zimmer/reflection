@@ -1,7 +1,7 @@
 #pragma once
-#include <Meta/Meta.hpp>
+#include <meta/meta.hpp>
 
-namespace COMPANY_NAME
+namespace Slate
 {
 	namespace Variable
 	{
@@ -45,7 +45,7 @@ namespace COMPANY_NAME
 				Complexity:
 					O(k) where k is the complexity of constructing the type, Variable_Type
 			*/
-			Base(const Base<Type>& b) : data{b.data}
+			Base(Base<Type> const& b) : data{b.data}
 			{}
 			
 			/*
@@ -65,7 +65,7 @@ namespace COMPANY_NAME
 				Complexity:
 					O(k) where k is the complexity of copy assigning the type, Variable_Type
 			*/
-			Base<Type>& operator=(const Base<Type>& b) 
+			Base<Type>& operator=(Base<Type> const& b) 
 			{
 				data = b.data;
 				return *this;
@@ -102,11 +102,11 @@ namespace COMPANY_NAME
 				Return:
 					The variable of this class
 				Summary:
-					General way of accessing the variable cosnt
+					General way of accessing the variable const
 				Complexity:
 					O(1)
 			*/
-			const Variable_Type& Variable() const
+			Variable_Type const& Variable() const
 			{
 				return data;
 			}

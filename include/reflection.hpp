@@ -1,9 +1,8 @@
 #pragma once
 #include <utility>
-#include <Meta/Meta.hpp>
-#include <Concept/Concept.hpp>
-
-namespace COMPANY_NAME 
+#include <meta/meta.hpp>
+#include <concept/concept.hpp>
+namespace Slate 
 {	
 	inline namespace Reflection
 	{
@@ -55,10 +54,10 @@ namespace COMPANY_NAME
 
 	namespace Imp::Reflection
 	{
-		using COMPANY_NAME::Meta::Wrap;
-		using COMPANY_NAME::Meta::Join;
-		using COMPANY_NAME::Meta::Unique;
-		using COMPANY_NAME::Meta::For_Each;
+		using Slate::Meta::Wrap;
+		using Slate::Meta::Join;
+		using Slate::Meta::Unique;
+		using Slate::Meta::For_Each;
 
 		namespace Build_Feature_
 		{

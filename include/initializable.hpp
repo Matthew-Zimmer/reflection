@@ -1,9 +1,9 @@
 #pragma once
 #include <utility>
-#include <Meta/Meta.hpp>
-#include <Concept/Concept.hpp>
+#include <meta/meta.hpp>
+#include <concept/concept.hpp>
 
-namespace COMPANY_NAME
+namespace Slate
 {
 	/*
 		Summary:

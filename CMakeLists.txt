@@ -17,4 +17,3 @@ install(FILES reflection-config.cmake DESTINATION lib/reflection)
 
 find_Package(concept REQUIRED)
 find_Package(meta REQUIRED)
-target_link_libraries(reflection INTERFACE concept meta)

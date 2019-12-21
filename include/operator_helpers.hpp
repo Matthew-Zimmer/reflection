@@ -25,9 +25,7 @@ namespace Slate::Operators
 
 	template <typename Type>
 	class Comparable
-	{
-	public:
-			};
+	{};
 
 	template <typename Type>
 	class Mathematically_Operatorable
@@ -37,7 +35,7 @@ namespace Slate::Operators
 	};
 
 	template <typename Type>
-	auto operator>(Type const& obj1, Type const& obj2) -> std::enable_if_t<std::is_base_of_v<Comparable<Type>, Type>, bool>
+	auto operator>(Type const& obj1, Type const& obj2) -> std::enable_if_t<std::is_base_of_v<Comparable<Type>, Type>, bool>	
 	{
 		return obj2 < obj1;
 	}

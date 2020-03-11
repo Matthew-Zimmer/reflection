@@ -93,7 +93,7 @@ namespace Slate
 				Complexity:
 					O(1)
 			*/
-			Variable_Type& Variable()
+			Variable_Type& variable()
 			{
 				return data;
 			}
@@ -106,7 +106,7 @@ namespace Slate
 				Complexity:
 					O(1)
 			*/
-			Variable_Type const& Variable() const
+			Variable_Type const& variable() const
 			{
 				return data;
 			}

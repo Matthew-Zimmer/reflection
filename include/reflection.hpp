@@ -101,7 +101,7 @@ namespace Slate
 			class Variable_Checker<T, std::void_t<typename T::Required_Variables>>
 			{
 			public:
-				using Type = typename T::Required_Variables;
+				using Type = Convert<typename T::Required_Variables>;
 			};
 
 			template <typename, typename=void>

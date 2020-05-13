@@ -13,6 +13,7 @@ target_compile_features(reflection INTERFACE cxx_std_17)
 target_compile_features(reflection_test PUBLIC cxx_std_17)
 
 #Set(CMAKE_CXX_FLAGS "-Wall" "-Wextra")
+set(CMAKE_CXX_FLAGS -fmax-errors=1)
 
 install(TARGETS reflection EXPORT reflection DESTINATION lib/reflection)
 install(EXPORT reflection DESTINATION lib/reflection)
